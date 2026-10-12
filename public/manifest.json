@@ -1,0 +1,16 @@
+{
+  "name": "Mis Gastos — Finanzas Personales",
+  "short_name": "Mis Gastos",
+  "description": "Sistema de gestión de finanzas personales, presupuestos quincenales, metas de ahorro y balance en tiempo real.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#0a0a0c",
+  "icons": [
+    {
+      "src": "/icons.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

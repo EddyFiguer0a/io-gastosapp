@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ========================================================
+   OPCIÓN 1 (FLAGSHIP): CYBER LIME (High Contrast & Animated)
+   ======================================================== */
+
+/* Cyber Dark (Default) */
+:root,
+html.dark[data-style='cyber'],
+html[data-style='cyber'] {
+  color-scheme: dark;
+  --bg-main: #141517;
+  --bg-card: #1c1d1f;
+  --bg-card-elevated: #232528;
+  --bg-card-hover: #292b2f;
+  --bg-card-inner: #191a1d;
+  --bg-input: #111214;
+  --text-primary: #ffffff;
+  --text-secondary: #a8b0a8;
+  --text-muted: #80868b;
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-active: rgba(220, 253, 82, 0.4);
+  --border-orange: #fcad52;
+  --accent-brand: #dcfd52; /* Cyber Neon Lime */
+  --accent-brand-subtle: rgba(220, 253, 82, 0.15);
+  --accent-orange: #fcad52;
+  --accent-orange-subtle: rgba(252, 173, 82, 0.15);
+  --accent-rose: #f43f5e;
+  --accent-emerald: #dcfd52;
+  --fab-bg: #dcfd52;
+  --fab-text: #000000;
+  --hero-bg: #dcfd52;
+  --hero-text: #000000;
+  --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+  --credit-card-bg: #141414;
+  --credit-card-text: #ffffff;
+  --credit-card-border: rgba(255, 255, 255, 0.1);
+  --progress-track: rgba(0, 0, 0, 0.6);
+  --bg-app: #141517;
+  --accent: #dcfd52;
+  --accent-rgb: 220, 253, 82;
+}
+
+/* Cyber Light */
+html:not(.dark)[data-style='cyber'] {
+  color-scheme: light;
+  --bg-main: #f2f5ed; /* Very light lime-gray tint */
+  --bg-card: #ffffff;
+  --bg-card-elevated: #ffffff;
+  --bg-card-hover: #f7f9f4;
+  --bg-card-inner: #f9fbf7;
+  --bg-input: #ffffff;
+  --text-primary: #121212;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-active: rgba(181, 216, 27, 0.4);
+  --border-orange: #f97316;
+  --accent-brand: #a8cc0e; /* Darker Lime for legibility */
+  --accent-brand-subtle: rgba(168, 204, 14, 0.15);
+  --accent-orange: #f97316;
+  --accent-orange-subtle: rgba(249, 115, 22, 0.15);
+  --accent-rose: #e11d48;
+  --accent-emerald: #10b981;
+  --fab-bg: #a8cc0e;
+  --fab-text: #ffffff;
+  --hero-bg: #a8cc0e;
+  --hero-text: #ffffff;
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --credit-card-bg: #141414; /* Keep card black to contrast with white background */
+  --credit-card-text: #ffffff;
+  --credit-card-border: rgba(255, 255, 255, 0.1);
+  --progress-track: rgba(0, 0, 0, 0.08);
+  --bg-app: #f2f5ed;
+  --accent: #a8cc0e;
+  --accent-rgb: 168, 204, 14;
+}
+
+/* ========================================================
+   OPCIÓN 2: SHELTHEME (Feminine, Minimalist, Lavender & Mint)
+   ======================================================== */
+
+/* Sheltheme Light (Default) */
+html:not(.dark)[data-style='sheltheme'],
+html[data-style='sheltheme'] {
+  color-scheme: light;
+  --bg-main: #f2f5f2;
+  --bg-card: #ffffff;
+  --bg-card-elevated: #ffffff;
+  --bg-card-hover: #f1f6f2;
+  --bg-card-inner: #f5f8f5;
+  --bg-input: #ffffff;
+  --text-primary: #12241b;
+  --text-secondary: #354e42;
+  --text-muted: #678374;
+  --border-subtle: rgba(45, 87, 71, 0.12);
+  --border-active: rgba(45, 87, 71, 0.35);
+  --border-orange: #fcad52;
+  --accent-brand: #2f6553; /* Sheltheme Forest Green */
+  --accent-brand-subtle: rgba(47, 101, 83, 0.1);
+  --accent-orange: #fcad52;
+  --accent-orange-subtle: rgba(252, 173, 82, 0.15);
+  --accent-rose: #e11d48;
+  --accent-emerald: #10b981;
+  --fab-bg: #fcad52;
+  --fab-text: #000000;
+  --hero-bg: #2f6553;
+  --hero-text: #ffffff;
+  --card-shadow: 0 4px 20px -2px rgba(47, 101, 83, 0.07);
+  --credit-card-bg: linear-gradient(135deg, #ffffff 0%, #edf5f0 100%);
+  --credit-card-text: #12241b;
+  --credit-card-border: rgba(45, 87, 71, 0.18);
+  --progress-track: #e2ede5;
+  --bg-app: #f2f5f2;
+  --accent: #2f6553;
+  --accent-rgb: 47, 101, 83;
+}
+
+/* Sheltheme Dark (Minimalist & Girlie Lavender) */
+html.dark[data-style='sheltheme'] {
+  color-scheme: dark;
+  --bg-main: #0c0a12; /* Deep dark purple-black */
+  --bg-card: #15131c; /* Slightly lighter deep purple */
+  --bg-card-elevated: #1a1723;
+  --bg-card-hover: #1e1b29;
+  --bg-card-inner: #121018;
+  --bg-input: #15131c;
+  --text-primary: #f0eef5;
+  --text-secondary: #c8c2d9;
+  --text-muted: #8b839c;
+  --border-subtle: rgba(184, 181, 255, 0.1); /* Subtle lavender border */
+  --border-active: rgba(184, 181, 255, 0.35);
+  --border-orange: #fcad52;
+  --accent-brand: #b8b5ff; /* Girlie Lavender */
+  --accent-brand-subtle: rgba(184, 181, 255, 0.12);
+  --accent-orange: #fcad52;
+  --accent-orange-subtle: rgba(252, 173, 82, 0.15);
+  --accent-rose: #fb7185; /* Soft pink */
+  --accent-emerald: #a78bfa; /* Lavender instead of emerald to keep the girlie theme */
+  --fab-bg: #b8b5ff; 
+  --fab-text: #000000;
+  --hero-bg: #b8b5ff;
+  --hero-text: #000000;
+  --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  --credit-card-bg: linear-gradient(135deg, #2a253a 0%, #15131c 100%);
+  --credit-card-text: #ffffff;
+  --credit-card-border: rgba(184, 181, 255, 0.15);
+  --progress-track: rgba(0, 0, 0, 0.4);
+  --bg-app: #0c0a12;
+  --accent: #b8b5ff;
+  --accent-rgb: 184, 181, 255;
+}
+
+/* Seleccion coherente con el tema */
+::selection {
+  background-color: var(--accent-brand);
+  color: var(--fab-text);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  user-select: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Tipografía de precisión numérica obligatoria */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+}
+
+/* Scrollbar sutil */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 9999px;
+}
+
+/* Áreas seguras móviles */
+.pb-safe {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom, 1rem));
+}
+
+.pt-safe {
+  padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+}
+
+/* Microinteracción táctil */
+.active-press {
+  transition: transform 0.12s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.12s ease;
+}
+
+.active-press:active {
+  transform: scale(0.97);
+  opacity: 0.88;
+}
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sheetEnter {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeInSlideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-sheet {
+  animation: sheetEnter 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
